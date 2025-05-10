@@ -1,0 +1,238 @@
+/* Margin*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f1f5f9;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+/* Skip content*/
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #3360e8;
+  color: #fff;
+  padding: 12px 20px;
+  z-index: 1000;
+  font-weight: bold;
+  border-radius: 0 0 10px 0;
+  transition: top 0.3s ease;
+}
+.skip-to-content:focus {
+  top: 0;
+}
+ 
+/* Nav Header*/
+header {
+  background-color: #5cabe4;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  background-color: #3b82f6;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+nav a:hover {
+  background-color: #1d4ed8;
+}
+
+/* Home*/
+#home {
+  background-color: #ffffff;
+  border: 2px solid #dbeafe;
+  padding: 30px;
+  margin: 40px auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  max-width: 1280px;
+}
+
+/* Judul Bagian */
+.judul-cerita {
+  text-align: center;
+  font-size: 28px;
+  color: #1e3a8a;
+  margin-bottom: 24px;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Map */
+#map {
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Post*/
+#listPostingan {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  padding: 0;
+  margin-top: 16px;
+}
+
+/* Border */
+.card-cerita {
+  background: #ffffff;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  transition: 0.3s ease;
+}
+.card-cerita:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+.card-cerita img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+.nama-user {
+  font-weight: bold;
+  color: #1e40af;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.tanggal-post {
+  font-size: 12px;
+  color: #64748b;
+}
+.deskripsi-cerita {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #334155;
+}
+
+/* Form Input*/
+form {
+  background-color: #ffffff;
+  padding: 24px;
+  max-width: 500px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #334155;
+}
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  font-size: 14px;
+}
+form input:focus,
+form textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+  outline: none;
+}
+form button,
+#startCamera,
+#takePhoto,
+#stopCamera {
+  background-color: #2563eb;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: 0.3s ease;
+}
+form button:hover,
+#startCamera:hover,
+#takePhoto:hover,
+#stopCamera:hover {
+  background-color: #1e3a8a;
+}
+
+/* Kamera */
+#photoPreview,
+#cameraPreview {
+  display: block;
+  max-width: 100%;
+  margin: 12px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Footer*/
+footer {
+  background-color: #e2e8f0;
+  color: #475569;
+  padding: 1rem;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+/* SPa */
+main#utama {
+  view-transition-name: utama;
+}
+::view-transition-old(utama),
+::view-transition-new(utama) {
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+}
